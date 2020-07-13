@@ -1,0 +1,15 @@
+{
+  "name": "ipl_project",
+  "version": "1.0.0",
+  "description": "IPL site with an express backend for propel school, Mountblue",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Jansher Aquib",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1"
+  }
+}
