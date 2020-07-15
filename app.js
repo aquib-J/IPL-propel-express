@@ -1,6 +1,13 @@
-const express = require('express');
-const path = require('path');
-const app = express();
+
+var express = require('express');
+var app = express();
+let path=require('path')
+let dotenv=require('dotenv');
+let bodyParser=require('body-parser');
+const topTenJsonHandler = require('./economyHandler');
+
+
+dotenv.config();
 
 const cors = require('cors');
 
@@ -16,6 +23,10 @@ app.get('/', (req, res) => {
 });
 
 
-app.listen(8080, () => {
+
+app.get('/year',topTenJsonHandler)
+
+
+app.listen(process.env.PORT || 8080, () => {
     console.log('we are listening at port : 8080 ');
 })

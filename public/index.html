@@ -7,6 +7,7 @@
     <meta name="description" content="IPL visualization">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
     <link href="./styles.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js"></script>
     <title>IPL visualization</title>
 </head>
 
@@ -15,8 +16,33 @@
     <div id="matches-played-per-year" style="min-width: 310px; height: 500px; overflow: hidden;"></div>
     <div id="matches-won-by-each-time-alltime" style="min-width: 310px;  height: 500px; overflow: hidden;"></div>
     <div id="extra-run-conceeded-by-each-team-2016" style="min-width: 310px;  height: 500px; overflow: hidden;"></div>
-    <div id="top-economical-bowlers-2015" style="min-width: 310px;  height: 500px; overflow: hidden;"></div>
+    </form>
+    <h2 style="text-align: center;">
+        <form id='myForm' action="/year" method="get">
+            <label for="year">Please select a Year :</label>
+            <select name="year" id="year">
+                <option name='2008' value="2008">2008</option>
+                <option name='2009' value="2009">2009</option>
+                <option name='2010' value="2010">2010</option>
+                <option name='2011' value="2011">2011</option>
+                <option name='2012' value="2012">2012</option>
+                <option name='2013' value="2013">2013</option>
+                <option name='2014' value="2014">2014</option>
+                <option name='2015' value="2015">2015</option>
+                <option name='2016' value="2016">2016</option>
+                <option name='2017' value="2017">2017</option>
+                <option name='2018' value="2018">2018</option>
+                <option name='2019' value="2019">2019</option>
+            </select>&nbsp&nbsp
+            <input type="submit" value="Graph">
+        </form>
+    </h2>
+    <div id="top-eco-bowler" style="min-width: 310px;  height: 500px; overflow: hidden;"></div>
+    
+    <!-- <div id="top-economical-bowlers-2015" style="min-width: 310px;  height: 500px; overflow: hidden;"></div> -->
     <div id="story" style="min-width: 700px;  height: 1000px; overflow: hidden;"></div>
+
+    <script src="/script.js"></script>
 
     <script src="https://code.highcharts.com/highcharts.js"></script>
 
